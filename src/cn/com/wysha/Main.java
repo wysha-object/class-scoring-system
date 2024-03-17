@@ -45,7 +45,7 @@ public class Main {
                     }
                     case "view" -> data.view(strings[1]);
                     case "totalScoreView" -> data.totalScoreView();
-                    case "v" -> System.out.println("1.0.0");
+                    case "v" -> System.out.println("1.0.1");
                     default -> logger.warning("Not a CMD");
                 }
             }

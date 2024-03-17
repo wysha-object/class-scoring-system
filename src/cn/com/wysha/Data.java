@@ -99,11 +99,14 @@ public class Data implements Serializable {
             v += value;
             for (int i = 0; i <= data.size(); i++) {
                 if (i == data.size() || Integer.parseInt(data.get(i)[2]) < value) {
-                    strings[0] = String.valueOf(i);
                     data.add(i, strings);
                     break;
                 }
             }
+        }
+        for (int i=0;i<data.size();++i){
+            String[] strings=data.get(i);
+            strings[0] = String.valueOf(i+1);
         }
         new View(scoreName, data.toArray(new String[0][3]), v / studentList.size()).setVisible(true);
     }
@@ -119,11 +122,14 @@ public class Data implements Serializable {
             v += value;
             for (int i = 0; i <= data.size(); i++) {
                 if (i == data.size() || Integer.parseInt(data.get(i)[2]) < value) {
-                    strings[0] = String.valueOf(i);
                     data.add(i, strings);
                     break;
                 }
             }
+        }
+        for (int i=0;i<data.size();++i){
+            String[] strings=data.get(i);
+            strings[0] = String.valueOf(i+1);
         }
         new View("totalScore", data.toArray(new String[0][3]), v / studentList.size()).setVisible(true);
     }
